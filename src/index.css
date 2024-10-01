@@ -1,0 +1,132 @@
+/* src/index.css */
+
+/* General Layout */
+body {
+  font-family: 'Helvetica', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Kanban Board Layout */
+.kanban-container {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+/* Kanban Column */
+.kanban-column {
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  max-width: 30%;
+}
+
+/* Ticket Cards */
+.ticket-card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.ticket-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.ticket-card p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Priority Color Bars */
+.priority-4 {
+  border-left: 5px solid #e74c3c; /* Red */
+}
+
+.priority-3 {
+  border-left: 5px solid #f39c12; /* Orange */
+}
+
+.priority-2 {
+  border-left: 5px solid #f1c40f; /* Yellow */
+}
+
+.priority-1 {
+  border-left: 5px solid #2ecc71; /* Green */
+}
+
+.priority-0 {
+  border-left: 5px solid #95a5a6; /* Gray */
+}
+
+/* Navbar and Options */
+.navbar {
+  background-color: #ffffff;
+  padding: 15px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Flexbox for grouping and sorting options */
+.navbar-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-options select {
+  margin-right: 15px;
+  width: 200px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.navbar-options select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+@media (max-width: 768px) {
+  .kanban-container {
+    flex-direction: column;
+  }
+  .kanban-column {
+    max-width: 100%;
+  }
+  .navbar-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-options select {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
